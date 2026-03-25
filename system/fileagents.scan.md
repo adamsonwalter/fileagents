@@ -1,0 +1,76 @@
+# FileAgents — Scan operation
+
+Read this when the user asks you to scan a directory, folder, or disk.
+For level definitions and file templates, see fileagents.levels.md.
+
+## What you are doing
+
+Scanning a directory tree to:
+1. Create L1 FILEAGENTS.md (frontmatter only) at each boundary folder
+2. Generate fileagents.index.md at the root (see fileagents.index.md for format)
+3. Report what you found
+
+## Algorithm
+
+```
+1. LIST directories under root (depth 1)
+2. SKIP all of these:
+   - Dot-prefixed (.git, .vscode, .cache, .Trash, etc.)
+   - node_modules, __pycache__, .venv, venv, env
+   - Library, Applications (macOS system)
+   - Any folders the user tells you to skip
+3. For each remaining directory:
+   a. IF FILEAGENTS.md already exists → READ it, DO NOT modify, include in index
+   b. Is it a boundary folder?
+      - Has 3+ subfolders → YES
+      - Has 10+ files → YES
+      - Name indicates a distinct unit (project name, client name, domain) → YES
+      - Otherwise → NO, skip
+   c. If YES and no FILEAGENTS.md exists → CREATE L1 FILEAGENTS.md
+4. RECURSE to depth 2 and depth 3, same boundary detection
+5. CEILING: max 50 FILEAGENTS.md created in one scan
+   If approaching 50, only instrument the most significant folders
+6. GENERATE fileagents.index.md at root (see fileagents.index.md)
+7. REPORT to user
+```
+
+## L1 FILEAGENTS.md format (the only thing you create during scan)
+
+```yaml
+---
+id: {kebab-case-folder-name}
+type: {client|project|knowledge|archive|system|personal}
+tags: [{folder-name-words}, {type}, {notable-subfolder-names}]
+status: active
+created: {today YYYY-MM-DD}
+spec_version: "0.2.0"
+---
+```
+
+Nothing after the closing `---`. Frontmatter only.
+
+For type classification, tag generation, and id rules, see fileagents.levels.md.
+
+## Constraints
+
+- NEVER overwrite an existing FILEAGENTS.md or AGENTS.md
+- NEVER create body content or AGENTS.md during a scan
+- Max 50 new FILEAGENTS.md files per scan
+- Idempotent: running twice produces the same result
+- Scan depth: 3 from root by default (user can override)
+- Should complete in minutes, not hours
+
+## Post-scan report
+
+Tell the user:
+1. Total directories scanned
+2. FILEAGENTS.md files CREATED (list each with path)
+3. Pre-existing FILEAGENTS.md files FOUND (list each with path)
+4. fileagents.index.md summary (folders by type, tag count, any warnings)
+5. Ask: "Which folder would you like me to set up in more detail?"
+
+## After the scan
+
+Most folders stay at L1 forever. Do NOT suggest elaborating every folder.
+Only suggest deepening a specific folder if the user indicates they work
+there regularly. When they ask, read fileagents.elaborate.md for the procedure.
