@@ -2,6 +2,8 @@
 
 **Make every folder on your disk self-describing, LLM-navigable, and structurally intelligent — with two markdown files and zero platform lock-in.**
 
+![FileAgents social preview](assets/fileagents-social-preview.svg)
+
 FileAgents is a lightweight open standard built around `FILEAGENTS.md`: a single markdown file that gives a folder durable, portable meaning. It lets any LLM understand what a folder is for, what rules apply there, and how it connects to the rest of your filesystem. `AGENTS.md` is the optional second layer for repeated procedures, but `FILEAGENTS.md` is the core unit.
 
 ## Why `FILEAGENTS.md` Matters
