@@ -2,6 +2,24 @@
 
 **Make every folder on your disk self-describing, LLM-navigable, and structurally intelligent — with two markdown files and zero platform lock-in.**
 
+FileAgents is a lightweight open standard for turning ordinary folders into durable AI-readable working contexts. It gives each important folder a small amount of permanent, local intelligence so any LLM can understand what the folder is for, what rules apply there, and how it connects to the rest of your filesystem.
+
+## Why People Care
+
+- Reuses the filesystem you already have instead of creating another app or database
+- Works with any model that can read markdown
+- Preserves context and operating knowledge across sessions and model upgrades
+- Scales progressively: most folders stay untouched, only important ones get smarter
+- Survives reorganisation because tags stay stable even when paths change
+
+## In One Minute
+
+1. Add the five `system/` files to your LLM context.
+2. Ask it to scan a directory.
+3. It creates lightweight `FILEAGENTS.md` files only where useful.
+4. You deepen important folders over time.
+5. Repeated work gets captured in `AGENTS.md` so the folder remembers.
+
 FileAgents turns your existing filesystem into a distributed knowledge graph. No database. No app. No vendor. Just markdown files that any LLM can read, any human can edit, and any folder can carry forever.
 
 ---
@@ -192,6 +210,8 @@ Any LLM that can read and write files. No dependencies, no installation, no conf
 3. **Pick a folder you work in regularly** — say "set up this folder" to elaborate it to L2
 4. **Work normally** — as you repeat procedures, the LLM suggests capturing them in AGENTS.md (L3)
 
+For a practical walkthrough, see [`QUICKSTART.md`](QUICKSTART.md).
+
 ### System Files
 
 | File | Purpose |
@@ -205,6 +225,27 @@ Any LLM that can read and write files. No dependencies, no installation, no conf
 ### Spec Version
 
 Current: **0.2.0**
+
+## Repository Layout
+
+| Path | Purpose |
+|------|---------|
+| `system/` | The actual FileAgents operating spec |
+| `examples/` | Concrete examples of L1, L2, L3, and index output |
+| `QUICKSTART.md` | Fast onboarding guide |
+| `CONTRIBUTING.md` | How to contribute examples, edge cases, and spec improvements |
+| `CHANGELOG.md` | Release history |
+
+## Best Fit
+
+FileAgents is most useful if you:
+
+- Work across many folders and repeatedly have to explain them to AI tools
+- Want durable local context without vendor lock-in
+- Care more about portability and clarity than full automation
+- Have a growing archive of projects, clients, research, or reference material
+
+It is less useful if all your work already lives inside a single tightly managed application and not in folders.
 
 ---
 
