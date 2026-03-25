@@ -2,14 +2,14 @@
 
 **Make every folder on your disk self-describing, LLM-navigable, and structurally intelligent — with two markdown files and zero platform lock-in.**
 
-FileAgents is a lightweight open standard for turning ordinary folders into durable AI-readable working contexts. It gives each important folder a small amount of permanent, local intelligence so any LLM can understand what the folder is for, what rules apply there, and how it connects to the rest of your filesystem.
+FileAgents is a lightweight open standard built around `FILEAGENTS.md`: a single markdown file that gives a folder durable, portable meaning. It lets any LLM understand what a folder is for, what rules apply there, and how it connects to the rest of your filesystem. `AGENTS.md` is the optional second layer for repeated procedures, but `FILEAGENTS.md` is the core unit.
 
-## Why People Care
+## Why `FILEAGENTS.md` Matters
 
+- One file can permanently explain a folder to any LLM
 - Reuses the filesystem you already have instead of creating another app or database
 - Works with any model that can read markdown
-- Preserves context and operating knowledge across sessions and model upgrades
-- Scales progressively: most folders stay untouched, only important ones get smarter
+- Preserves governance and context across sessions and model upgrades
 - Survives reorganisation because tags stay stable even when paths change
 
 ## In One Minute
@@ -17,10 +17,10 @@ FileAgents is a lightweight open standard for turning ordinary folders into dura
 1. Add the five `system/` files to your LLM context.
 2. Ask it to scan a directory.
 3. It creates lightweight `FILEAGENTS.md` files only where useful.
-4. You deepen important folders over time.
-5. Repeated work gets captured in `AGENTS.md` so the folder remembers.
+4. That file becomes the folder's durable identity and rule layer.
+5. Only later, if needed, repeated work gets captured in `AGENTS.md`.
 
-FileAgents turns your existing filesystem into a distributed knowledge graph. No database. No app. No vendor. Just markdown files that any LLM can read, any human can edit, and any folder can carry forever.
+FileAgents turns your existing filesystem into a distributed knowledge graph. No database. No app. No vendor. Just `FILEAGENTS.md`, optional `AGENTS.md`, and markdown files that any LLM can read, any human can edit, and any folder can carry forever.
 
 ---
 
@@ -36,13 +36,21 @@ FileAgents closes that gap permanently.
 
 ---
 
+## `FILEAGENTS.md` First
+
+If you understand one thing, understand this:
+
+`FILEAGENTS.md` is the product.
+
+It is the durable identity, governance, and context layer for a folder. It is what makes a folder legible to AI without requiring a platform, database, memory layer, or proprietary tool. `AGENTS.md` matters, but it is strictly secondary: execution grows later, only where repeated work justifies it.
+
 ## How It Works
 
 Two files per folder. One index at the root. That's it.
 
-**FILEAGENTS.md** — the *constitution*. Declares what the folder IS: its purpose, governance rules, quality standards, constraints, tone, and cross-references. Written once, rarely changed. This is the folder's identity.
+**FILEAGENTS.md** — the *constitution* and the star of the system. Declares what the folder IS: its purpose, governance rules, quality standards, constraints, tone, and cross-references. Written once, rarely changed. This is the folder's identity.
 
-**AGENTS.md** — the *execution layer*. Declares what an LLM can DO here: procedures, templates, verification checklists, edge cases, domain knowledge. Grows organically through use. Optional — most folders never need it.
+**AGENTS.md** — the *execution layer*. Declares what an LLM can DO here: procedures, templates, verification checklists, edge cases, domain knowledge. Grows organically through use. Optional. Most folders never need it.
 
 **fileagents.index.md** — the *discovery cache*. A single auto-generated file at the root that maps every tagged folder. Resolves tags to paths so folders reference each other by stable identifiers, not brittle paths. Disposable — regenerate any time.
 
@@ -74,17 +82,17 @@ Most folders stay L0 forever. Some get catalogued. A few get governed. Only the 
 8. The system works with any LLM. No platform dependencies.
 ```
 
-Rule 1 is the philosophical core. Rule 7 is the architectural insight. Rule 8 is the survival guarantee.
+Rule 1 is the philosophical core. Rule 5 is why `FILEAGENTS.md` stays authoritative. Rule 7 is the architectural insight. Rule 8 is the survival guarantee.
 
 ---
 
 ## Why This Matters: The Multiplier Effects
 
-### 1. Context Window Efficiency (Immediate ROI)
+### 1. `FILEAGENTS.md` Replaces Repeated Explanation (Immediate ROI)
 
 Every LLM session starts cold. Without FileAgents, you burn 20–40% of your context window just getting the model oriented: explaining folder purpose, naming conventions, quality rules, what not to touch.
 
-With FileAgents, the model reads FILEAGENTS.md and *already knows*. One file read replaces hundreds of lines of repeated instruction. The context window is freed for actual work.
+With FileAgents, the model reads `FILEAGENTS.md` and already knows. One file read replaces hundreds of lines of repeated instruction. The context window is freed for actual work.
 
 **Multiplier: Every governed folder saves context in every future session, across every model, forever.**
 
@@ -179,9 +187,9 @@ Paths are volatile. You rename a folder, move it to a different drive, restructu
 
 This is the same architectural insight behind URNs vs URLs, DNS vs IP addresses, and content-addressable storage vs location-based storage.
 
-### Why Constitution + Execution Separation?
+### Why `FILEAGENTS.md` + `AGENTS.md` Separation?
 
-FILEAGENTS.md (what the folder IS) changes slowly. AGENTS.md (what you can DO) changes frequently. Separating them means governance stability doesn't inhibit operational evolution, and operational experimentation can't corrupt governance rules.
+`FILEAGENTS.md` (what the folder IS) changes slowly. `AGENTS.md` (what you can DO) changes frequently. Separating them means governance stability doesn't inhibit operational evolution, and operational experimentation can't corrupt governance rules.
 
 This mirrors the separation of policy and mechanism in operating systems, or constitution and legislation in governance.
 
@@ -206,9 +214,9 @@ Any LLM that can read and write files. No dependencies, no installation, no conf
 ### Quick Start
 
 1. **Point your LLM at the FileAgents system files** — they contain the complete operating instructions
-2. **Say "scan this directory"** — the LLM creates L1 FILEAGENTS.md files at boundary folders and generates the index
-3. **Pick a folder you work in regularly** — say "set up this folder" to elaborate it to L2
-4. **Work normally** — as you repeat procedures, the LLM suggests capturing them in AGENTS.md (L3)
+2. **Say "scan this directory"** — the LLM creates L1 `FILEAGENTS.md` files at boundary folders and generates the index
+3. **Pick a folder you work in regularly** — say "set up this folder" to turn its `FILEAGENTS.md` into a real governance layer
+4. **Work normally** — only as repetition emerges does the LLM suggest capturing procedures in `AGENTS.md`
 
 For a practical walkthrough, see [`QUICKSTART.md`](QUICKSTART.md).
 
