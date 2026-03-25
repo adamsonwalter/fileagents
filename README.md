@@ -1,10 +1,12 @@
 # FileAgents
 
-**Make every folder on your disk self-describing, LLM-navigable, and structurally intelligent — with two markdown files and zero platform lock-in.**
+**The folder is the unit of intelligence. FileAgents turns folders into durable AI operating contexts that compound with use.**
 
 ![FileAgents social preview](assets/fileagents-social-preview.svg)
 
 FileAgents is a lightweight open standard built around `FILEAGENTS.md`: a single markdown file that gives a folder durable, portable meaning. It lets any LLM understand what a folder is for, what rules apply there, and how it connects to the rest of your filesystem. `AGENTS.md` is the optional second layer for repeated procedures, but `FILEAGENTS.md` is the core unit.
+
+**Not just markdown conventions:** FileAgents creates a reinforcing loop where each governed folder improves future sessions, each cross-reference increases network value, and each repeated workflow can be captured once and reused indefinitely.
 
 ## Why `FILEAGENTS.md` Matters
 
@@ -14,6 +16,20 @@ FileAgents is a lightweight open standard built around `FILEAGENTS.md`: a single
 - Preserves governance and context across sessions and model upgrades
 - Survives reorganisation because tags stay stable even when paths change
 
+## Why This Compounds
+
+```
+scan -> folders become discoverable
+     -> governed folders become legible to AI
+     -> tags create cross-folder navigation
+     -> repeated work gets captured once
+     -> future sessions start smarter
+     -> smarter sessions generate better structure
+     -> better structure makes the system more valuable
+```
+
+This is the key claim: FileAgents is not just a way to document folders. It is a way to turn your filesystem into a compounding AI working memory that improves with use instead of requiring constant re-explanation.
+
 ## In One Minute
 
 1. Add the five `system/` files to your LLM context.
@@ -22,7 +38,7 @@ FileAgents is a lightweight open standard built around `FILEAGENTS.md`: a single
 4. That file becomes the folder's durable identity and rule layer.
 5. Only later, if needed, repeated work gets captured in `AGENTS.md`.
 
-FileAgents turns your existing filesystem into a distributed knowledge graph. No database. No app. No vendor. Just `FILEAGENTS.md`, optional `AGENTS.md`, and markdown files that any LLM can read, any human can edit, and any folder can carry forever.
+FileAgents turns your existing filesystem into a distributed knowledge graph and durable AI context layer. No database. No app. No vendor. Just `FILEAGENTS.md`, optional `AGENTS.md`, and markdown files that any LLM can read, any human can edit, and any folder can carry forever.
 
 ---
 
@@ -35,6 +51,14 @@ Meanwhile, your filesystem — the largest, oldest, most universal knowledge str
 The gap isn't "AI can't read files." The gap is **AI has no idea what your folders mean.**
 
 FileAgents closes that gap permanently.
+
+## The Quoteable Version
+
+`FILEAGENTS.md` gives a folder durable meaning.
+
+`AGENTS.md` gives it reusable procedures.
+
+Together they let the folder remember what the model forgets.
 
 ---
 

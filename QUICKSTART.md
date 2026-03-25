@@ -1,5 +1,7 @@
 # Quick start
 
+FileAgents turns folders into durable AI operating contexts that compound with use. The fast version: scan once, govern the important folders, and let reusable execution emerge only where repetition proves it is worth capturing.
+
 ## 1. Get the system files
 
 Download or clone this repo. The five files in `system/` are all you need:
@@ -81,3 +83,6 @@ to its pricing models without you pointing the way.
 
 Each governed folder makes every other governed folder more useful.
 The network effect is real and it compounds with every folder you add.
+
+That is the deeper point of the system: the filesystem stops being passive storage
+and starts behaving like durable AI context that improves with use.
