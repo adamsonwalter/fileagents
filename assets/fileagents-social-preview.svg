@@ -40,10 +40,10 @@
   <text x="310" y="407" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="400" fill="#325066">One markdown file that tells any LLM what a folder is,</text>
   <text x="310" y="445" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="400" fill="#325066">what rules apply there, and how it connects.</text>
 
-  <rect x="857" y="226" width="108" height="108" rx="18" fill="#16344C"/>
-  <path d="M886 262H936" stroke="#F8F5EC" stroke-width="10" stroke-linecap="round"/>
-  <path d="M886 292H936" stroke="#F8F5EC" stroke-width="10" stroke-linecap="round"/>
-  <path d="M886 322H922" stroke="#F8F5EC" stroke-width="10" stroke-linecap="round"/>
+  <rect x="882" y="214" width="82" height="82" rx="16" fill="#16344C"/>
+  <path d="M909 238H937" stroke="#F8F5EC" stroke-width="8" stroke-linecap="round"/>
+  <path d="M909 260H937" stroke="#F8F5EC" stroke-width="8" stroke-linecap="round"/>
+  <path d="M909 282H929" stroke="#F8F5EC" stroke-width="8" stroke-linecap="round"/>
 
   <text x="310" y="540" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="600" fill="#16344C">FileAgents</text>
   <text x="455" y="540" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="400" fill="#5A6F7F">Portable folder intelligence for any LLM</text>
