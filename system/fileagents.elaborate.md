@@ -2,6 +2,7 @@
 
 Read this when the user asks to deepen, improve, or set up a specific folder.
 For level definitions and file templates, see fileagents.levels.md.
+For `humans.html`, see `fileagents.humans.md`.
 
 ## What you are doing
 
@@ -22,7 +23,8 @@ The folder has frontmatter-only FILEAGENTS.md. User wants rules and structure.
    - Tone: formal/informal, audience?
 4. Add body sections to FILEAGENTS.md (keep the frontmatter unchanged)
 5. Update frontmatter if needed (add domain, depends_on_tags, owner)
-6. If tags or depends_on_tags changed → regenerate index (see fileagents.index.md)
+6. Create or refresh **humans.html** in this folder (see `fileagents.humans.md`) — derived from the new governance + shallow directory listing
+7. If tags or depends_on_tags changed → regenerate index (see fileagents.index.md)
 
 Use only the body sections the folder actually needs. See LEVELS.md for
 the full list of available sections and a complete L2 example.
@@ -36,7 +38,8 @@ The folder has governed FILEAGENTS.md. User wants operational procedures.
 3. Create AGENTS.md starting RUDIMENTARY:
    - Overview (2-3 sentences)
    - 1-2 key conventions or procedures
-4. As the user works over time, offer to add:
+4. Refresh **humans.html** so the “Procedures at a glance” section reflects `AGENTS.md` headings (see `fileagents.humans.md`).
+5. As the user works over time, offer to add:
    - More procedures with detailed steps
    - Templates with {{placeholder}} markers
    - Verification checklists
@@ -94,7 +97,14 @@ last_updated: 2026-03-24
 - pricing.xlsx | 5 sessions | last: 2026-03-20
 ```
 
-### Cluster detection (when heatmap reaches 50+ entries)
+## humans.html (L2+)
+
+Whenever you materially change `FILEAGENTS.md` or `AGENTS.md`, or the user reports
+significant file churn in the folder, offer to refresh `humans.html` using
+`fileagents.humans.md`. Keep it in sync with governance the same way you would
+update an Activity heatmap: humans see the folder; models read `FILEAGENTS.md` first.
+
+## Cluster detection (when heatmap reaches 50+ entries)
 1. Identify files frequently accessed together
 2. Generate candidate tags for the cluster
 3. Check fileagents.index.md for existing folders with matching tags

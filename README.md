@@ -4,7 +4,7 @@
 
 ![FileAgents social preview](assets/fileagents-social-preview.svg)
 
-FileAgents is a lightweight open standard built around `FILEAGENTS.md`: a single markdown file that gives a folder durable, portable meaning. It lets any LLM understand what a folder is for, what rules apply there, and how it connects to the rest of your filesystem. `AGENTS.md` is the optional second layer for repeated procedures, but `FILEAGENTS.md` is the core unit.
+FileAgents is a lightweight open standard built around `FILEAGENTS.md`: a single markdown file that gives a folder durable, portable meaning. It lets any LLM understand what a folder is for, what rules apply there, and how it connects to the rest of your filesystem. `AGENTS.md` is the optional second layer for repeated procedures, but `FILEAGENTS.md` is the core unit. **`humans.html`** is an optional browser-facing summary for people (recommended once a folder is governed).
 
 **Not just markdown conventions:** FileAgents creates a reinforcing loop where each governed folder improves future sessions, each cross-reference increases network value, and each repeated workflow can be captured once and reused indefinitely.
 
@@ -32,13 +32,13 @@ This is the key claim: FileAgents is not just a way to document folders. It is a
 
 ## In One Minute
 
-1. Add the five `system/` files to your LLM context.
+1. Add the six `system/` files to your LLM context.
 2. Ask it to scan a directory.
 3. It creates lightweight `FILEAGENTS.md` files only where useful.
 4. That file becomes the folder's durable identity and rule layer.
 5. Only later, if needed, repeated work gets captured in `AGENTS.md`.
 
-FileAgents turns your existing filesystem into a distributed knowledge graph and durable AI context layer. No database. No app. No vendor. Just `FILEAGENTS.md`, optional `AGENTS.md`, and markdown files that any LLM can read, any human can edit, and any folder can carry forever.
+FileAgents turns your existing filesystem into a distributed knowledge graph and durable AI context layer. No database. No app. No vendor. Just `FILEAGENTS.md`, optional `AGENTS.md`, optional `humans.html`, and markdown files that any LLM can read, any human can edit, and any folder can carry forever.
 
 ---
 
@@ -72,11 +72,13 @@ It is the durable identity, governance, and context layer for a folder. It is wh
 
 ## How It Works
 
-Two files per folder. One index at the root. That's it.
+Two markdown files per folder (plus optional HTML), one index at the root. That's it.
 
 **FILEAGENTS.md** — the *constitution* and the star of the system. Declares what the folder IS: its purpose, governance rules, quality standards, constraints, tone, and cross-references. Written once, rarely changed. This is the folder's identity.
 
 **AGENTS.md** — the *execution layer*. Declares what an LLM can DO here: procedures, templates, verification checklists, edge cases, domain knowledge. Grows organically through use. Optional. Most folders never need it.
+
+**humans.html** — the *human lens*. A static page you open in a browser for a concise, scannable summary aligned with `FILEAGENTS.md` (and `AGENTS.md` at L3). Optional at L1; recommended at L2+. Regenerated when governance or material contents change. See `fileagents.humans.md`.
 
 **fileagents.index.md** — the *discovery cache*. A single auto-generated file at the root that maps every tagged folder. Resolves tags to paths so folders reference each other by stable identifiers, not brittle paths. Disposable — regenerate any time.
 
@@ -88,14 +90,14 @@ Not every folder needs intelligence. FileAgents uses a four-level maturity model
 |-------|-------|-------------|-------------|
 | **L0** | Raw | Nothing | Default (~95% of folders) |
 | **L1** | Catalogued | FILEAGENTS.md frontmatter only | Automated scan |
-| **L2** | Governed | FILEAGENTS.md with body sections | On request |
-| **L3** | Operative | FILEAGENTS.md + AGENTS.md | Through use |
+| **L2** | Governed | FILEAGENTS.md with body sections; `humans.html` recommended | On request |
+| **L3** | Operative | FILEAGENTS.md + AGENTS.md; `humans.html` with procedure summary | Through use |
 
 Most folders stay L0 forever. Some get catalogued. A few get governed. Only the ones you actually work in become operative. **Intelligence concentrates where activity concentrates.** No wasted effort.
 
 ---
 
-## The Eight Core Rules
+## The Nine Core Rules
 
 ```
 1. The folder is the unit of intelligence. The LLM is disposable.
@@ -106,6 +108,7 @@ Most folders stay L0 forever. Some get catalogued. A few get governed. Only the 
 6. The index is disposable — regenerate any time.
 7. Governance inherits downward. Execution does not.
 8. The system works with any LLM. No platform dependencies.
+9. **humans.html** is derived from `FILEAGENTS.md` and must not contradict it (see `fileagents.humans.md`).
 ```
 
 Rule 1 is the philosophical core. Rule 5 is why `FILEAGENTS.md` stays authoritative. Rule 7 is the architectural insight. Rule 8 is the survival guarantee.
@@ -255,10 +258,11 @@ For a practical walkthrough, see [`QUICKSTART.md`](QUICKSTART.md).
 | `fileagents.scan.md` | Scan algorithm and constraints |
 | `fileagents.elaborate.md` | Elaboration procedures (L1→L2→L3) |
 | `fileagents.index.md` | Index generation, format, and tag resolution |
+| `fileagents.humans.md` | `humans.html` — human-readable folder lens (HTML profile and workflow) |
 
 ### Spec Version
 
-Current: **0.2.0**
+Current: **0.3.0**
 
 ## Repository Layout
 

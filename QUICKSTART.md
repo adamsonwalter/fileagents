@@ -4,7 +4,7 @@ FileAgents turns folders into durable AI operating contexts that compound with u
 
 ## 1. Get the system files
 
-Download or clone this repo. The five files in `system/` are all you need:
+Download or clone this repo. The six files in `system/` are all you need:
 
 ```
 system/
@@ -13,15 +13,16 @@ system/
   fileagents.scan.md         ← scan algorithm
   fileagents.elaborate.md    ← elaboration procedures
   fileagents.index.md        ← index generation and tag resolution
+  fileagents.humans.md       ← humans.html profile and workflow
 ```
 
 ## 2. Attach to your LLM
 
-**Claude Projects:** Create a new project. Upload all five files as project knowledge.
+**Claude Projects:** Create a new project. Upload all six files as project knowledge.
 
-**Claude Code / Cowork:** Place the five files in your working directory or reference them.
+**Claude Code / Cowork:** Place the six files in your working directory or reference them.
 
-**GPT:** Create a custom GPT or start a conversation with all five files attached.
+**GPT:** Create a custom GPT or start a conversation with all six files attached.
 
 **Cursor / Windsurf:** Place in your project root. These tools read markdown context files natively.
 
@@ -73,7 +74,7 @@ captured once and available in every future session, with any LLM.
 ## That's it
 
 No installation. No configuration. No database. No app.
-Five markdown files that teach any LLM how to make your folders intelligent.
+Six markdown files that teach any LLM how to make your folders intelligent. At L2+, add **`humans.html`** per `fileagents.humans.md` so people get a quick browser summary alongside `FILEAGENTS.md`.
 
 ## What happens next
 

@@ -8,7 +8,7 @@ depends_on_tags: [legal-templates, pricing-models]
 created: 2025-11-15
 verified: 2026-03-20
 owner: Walter
-spec_version: "0.2.0"
+spec_version: "0.3.0"
 ---
 
 ## Purpose

@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.3.0 — 2026-03-26
+
+### Added
+- `system/fileagents.humans.md` — optional per-folder **`humans.html`**: static, browser-friendly human lens aligned with `FILEAGENTS.md` / `AGENTS.md`, safe HTML profile, regeneration workflow with elaboration
+- Core rule 9 and README/QUICKSTART updates for six system files
+
+### Design decisions
+- `humans.html` is derived and regenerable (like the index), not a second constitution
+- Scans do not create `humans.html` by default; L2+ creation/refresh is tied to `fileagents.elaborate.md`
+
 ## v0.2.0 — 2026-03-25
 
 Initial public release.

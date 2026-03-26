@@ -22,11 +22,16 @@ type: client
 tags: [clients, consulting, projects, active]
 status: active
 created: 2026-03-24
-spec_version: "0.2.0"
+spec_version: "0.3.0"
 ---
 ```
 
 That is the ENTIRE file. Nothing after the closing `---`.
+
+### L1 humans.html
+
+**Optional.** Scans do not create it by default. If present, it must be a minimal
+orientation page derived only from frontmatter (see `fileagents.humans.md`).
 
 ### Frontmatter field reference
 
@@ -41,7 +46,7 @@ created           recommend  ISO 8601 date         YYYY-MM-DD
 verified          optional   ISO 8601 date         last human confirmation
 depends_on_tags   optional   [string array]        tags of needed folders, NEVER paths
 owner             optional   string                person or team
-spec_version      recommend  string                "0.2.0"
+spec_version      recommend  string                "0.3.0"
 ```
 
 ### Type classification heuristics
@@ -84,7 +89,7 @@ depends_on_tags: [legal-templates, pricing-models]
 created: 2025-11-15
 verified: 2026-03-01
 owner: Walter
-spec_version: "0.2.0"
+spec_version: "0.3.0"
 ---
 
 ## Purpose
@@ -142,10 +147,20 @@ last_updated: 2026-03-20
 - Body: < 3000 words (if longer → subfolder extraction needed)
 - Heatmap: max 100 entries (rolling: drop lowest when full)
 
+### L2 humans.html
+
+**Recommended.** A single `humans.html` in the same folder as `FILEAGENTS.md`,
+regenerated when governance or material inventory changes. It is the **human lens**:
+browser-friendly summary and routing to `FILEAGENTS.md` / `AGENTS.md`. Full rules and
+HTML profile: `fileagents.humans.md`.
+
 ## L3 — Operative
 
 FILEAGENTS.md (same as L2) PLUS AGENTS.md with execution procedures.
 Created when user decides this folder needs operational LLM instructions.
+
+At L3, `humans.html` should include a short **Procedures at a glance** section
+sourced from `AGENTS.md` headings (not a full copy of procedures).
 
 ### L3 AGENTS.md (complete file):
 

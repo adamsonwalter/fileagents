@@ -2,6 +2,7 @@
 
 Read this when the user asks you to scan a directory, folder, or disk.
 For level definitions and file templates, see fileagents.levels.md.
+For `humans.html`, see `fileagents.humans.md` (not created during scan by default).
 
 ## What you are doing
 
@@ -43,7 +44,7 @@ type: {client|project|knowledge|archive|system|personal}
 tags: [{folder-name-words}, {type}, {notable-subfolder-names}]
 status: active
 created: {today YYYY-MM-DD}
-spec_version: "0.2.0"
+spec_version: "0.3.0"
 ---
 ```
 
@@ -55,6 +56,8 @@ For type classification, tag generation, and id rules, see fileagents.levels.md.
 
 - NEVER overwrite an existing FILEAGENTS.md or AGENTS.md
 - NEVER create body content or AGENTS.md during a scan
+- Do **not** create `humans.html` during a scan unless the user explicitly asks;
+  it is recommended at L2+ (see `fileagents.humans.md`)
 - Max 50 new FILEAGENTS.md files per scan
 - Idempotent: running twice produces the same result
 - Scan depth: 3 from root by default (user can override)
