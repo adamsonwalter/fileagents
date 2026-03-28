@@ -108,10 +108,12 @@ Most folders stay L0 forever. Some get catalogued. A few get governed. Only the 
 6. The index is disposable — regenerate any time.
 7. Governance inherits downward. Execution does not.
 8. The system works with any LLM. No platform dependencies.
-9. **humans.html** is derived from `FILEAGENTS.md` and must not contradict it (see `fileagents.humans.md`).
+9. **humans.html** is derived from `FILEAGENTS.md` and must not contradict it. It is strictly the human lens—never entangle UI with AI instructions.
+10. **Sequential Forcing:** Multi-folder upgrades must halt and verify before sequentially generating HTML nodes to prevent parser crashes.
+11. **The Closure Protocol:** Every complex multi-file task must instinctively execute a `/receipt` to output a `.fileagents.receipt.md` logging modified state and constraints.
 ```
 
-Rule 1 is the philosophical core. Rule 5 is why `FILEAGENTS.md` stays authoritative. Rule 7 is the architectural insight. Rule 8 is the survival guarantee.
+Rule 1 is the philosophical core. Rule 5 is why `FILEAGENTS.md` stays authoritative. Rule 7 is the architectural insight. Rule 11 guarantees self-correction.
 
 ---
 
@@ -221,6 +223,12 @@ This is the same architectural insight behind URNs vs URLs, DNS vs IP addresses,
 `FILEAGENTS.md` (what the folder IS) changes slowly. `AGENTS.md` (what you can DO) changes frequently. Separating them means governance stability doesn't inhibit operational evolution, and operational experimentation can't corrupt governance rules.
 
 This mirrors the separation of policy and mechanism in operating systems, or constitution and legislation in governance.
+
+### Why Not Use HTML for SOPs? (The Two-File Protocol)
+
+A common pitfall is merging AI execution instructions with client-facing HTML documents. This violates the Single Responsibility Principle: modifying the AI prompt breaks the client layout, and styling the layout forces the AI to process thousands of useless CSS tokens (Token Bleed). FileAgents enforcing a strict audience split:
+- **`AGENTS.md` (Machine Layer):** Pure, token-efficient markdown mapping explicitly to Hard-Wired Operational Triggers (e.g., `/govern`, `/receipt`) and procedures.
+- **`humans.html` (Human Layer):** A visually rich routing page generated from the markdown governance, completely free of raw AI prompting noise.
 
 ### Why Human-Gated Elaboration?
 
