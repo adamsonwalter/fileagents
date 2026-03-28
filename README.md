@@ -230,6 +230,22 @@ A common pitfall is merging AI execution instructions with client-facing HTML do
 - **`AGENTS.md` (Machine Layer):** Pure, token-efficient markdown mapping explicitly to Hard-Wired Operational Triggers (e.g., `/govern`, `/receipt`) and procedures.
 - **`humans.html` (Human Layer):** A visually rich routing page generated from the markdown governance, completely free of raw AI prompting noise.
 
+### SOP Scope & Limitations (The Bounded Pipeline)
+
+FileAgents is deliberately optimized for **linear, functional pipelines** (e.g., *Jotform CSV → Claude SKILL Analysis → Drafted SBR Report*). It is designed to replace "the person reading an email and writing the document." 
+
+**Strengths:**
+- Lightning-fast deterministic execution via explicit slash-command triggers.
+- Near-zero context bleed due to the strict "folder-as-boundary" rule.
+- Exceptional at repetitive document ingestion and highly structured text output.
+
+**Weaknesses & Limitations:**
+- **FileAgents is not an autonomous multi-agent swarm.** If your workflow requires cross-repository deep analysis, recursive software debugging, or non-linear lateral problem solving, this structure will break. 
+- It forces "Flat-Primitives." It explicitly rejects building complex operating-system hierarchies (`Input/`, `Templates/`, `Process/`) inside functional folders. Maintaining awareness across deep nested hierarchy fractures the LLM's context window. 
+- It relies heavily on boundaries. The closure protocol (`/receipt`) mandates that the AI logs its execution friction for human review, rather than attempting recursive, infinite self-correction loops.
+
+If you are trying to build AGI, look elsewhere. If you want to turn a standard filesystem folder into a highly obedient, self-documenting pipeline, use FileAgents.
+
 ### Why Human-Gated Elaboration?
 
 Auto-generating governance creates noise. If every folder automatically got L2 governance, you'd have thousands of files making claims nobody verified. The human gate ensures every governed folder reflects actual intent, not inference.
