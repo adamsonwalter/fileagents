@@ -140,6 +140,21 @@ Do **together** with governance updates when possible:
 
 Light-touch L1 scans may **omit** `humans.html` to keep scans fast; add on request or at L2.
 
+## How to present humans.html to a human (/contents)
+
+When the user asks "what is in [target]?" or triggers `/contents [target]`:
+
+1. **Resolve the Target Folder**:
+   - If `[target]` is omitted, use the current active folder.
+   - If provided, scan `fileagents.index.md` to resolve it. Match `[target]` against a specific index `tag` or a unique partial substring of a folder path.
+   - If the match is ambiguous, halt and ask the user to clarify.
+2. **Locate `humans.html`** in the resolved folder.
+3. If available, delegate to a **visualization tool** (e.g., `view_file`) to read and present the file content.
+4. If available, delegate to a **system browser tool** (e.g., `open` on macOS) to trigger the browser via `file://` URL.
+5. **Fallback**: If no display tools are available, display the text content directly in the chat window.
+
+Always aim for the highest-fidelity visualization supported by the current platform.
+
 ## Complete minimal example (structure only)
 
 ```html

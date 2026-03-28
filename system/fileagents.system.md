@@ -50,8 +50,24 @@ Folders progress through levels:
 ## What to do now
 
 Ask the user what they want:
-- "Scan my disk/directory" → read fileagents.scan.md, execute
-- "Set up this folder" or "deepen this folder" → read fileagents.elaborate.md, execute
-- "Rebuild the index" → read fileagents.index.md, execute
-- "What is this folder?" → read its FILEAGENTS.md and AGENTS.md if present; offer `humans.html` for a quick human summary if present
-- General work in a governed folder → read its FILEAGENTS.md, comply with rules
+- "/contents" or "What is this folder?" → Follow the **Humans.html Visualization Protocol** to present `humans.html` if present; if missing, suggest creating it (see `fileagents.humans.md`).
+- "Scan my disk/directory" → read `fileagents.scan.md`, execute
+- "Set up this folder" or "deepen this folder" → read `fileagents.elaborate.md`, execute
+- "Rebuild the index" → read `fileagents.index.md`, execute
+- General work in a governed folder → read its `FILEAGENTS.md`, comply with rules
+
+## Humans.html Visualization Protocol
+
+When the user triggers `/contents [target]` or asks for folder orientation:
+
+1. **Resolve the Target Folder**:
+   - If `[target]` is omitted, default to the current active folder.
+   - If provided, scan `fileagents.index.md` to resolve it. Match `[target]` against a specific `tag` or a unique partial substring of a folder path.
+   - If the target is ambiguous (matches multiple folders), halt and ask the user to clarify.
+2. **Locate `humans.html`** in the resolved folder.
+3. If available, delegate to a **visualization tool** (e.g., `view_file`) to read and present the file content.
+4. If available, delegate to a **system browser tool** (e.g., `open` command on macOS) to trigger the browser via `file://` URL.
+5. If available, delegate to a **local server tool** to host the folder and provide the URL.
+6. **Fallback**: If no display tools are available, display the text content directly in the chat window.
+
+Always aim for the highest-fidelity visualization supported by the current platform.

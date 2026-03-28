@@ -78,7 +78,7 @@ Two markdown files per folder (plus optional HTML), one index at the root. That'
 
 **AGENTS.md** — the *execution layer*. Declares what an LLM can DO here: procedures, templates, verification checklists, edge cases, domain knowledge. Grows organically through use. Optional. Most folders never need it.
 
-**humans.html** — the *human lens*. A static page you open in a browser for a concise, scannable summary aligned with `FILEAGENTS.md` (and `AGENTS.md` at L3). Optional at L1; recommended at L2+. Regenerated when governance or material contents change. See `fileagents.humans.md`.
+**humans.html** — the *human lens*. A static page you open in a browser (or summon via `/contents [target]`) for a concise, scannable summary aligned with `FILEAGENTS.md` (and `AGENTS.md` at L3). Optional at L1; recommended at L2+. Regenerated when governance or material contents change. See `fileagents.humans.md`.
 
 **fileagents.index.md** — the *discovery cache*. A single auto-generated file at the root that maps every tagged folder. Resolves tags to paths so folders reference each other by stable identifiers, not brittle paths. Disposable — regenerate any time.
 
@@ -270,6 +270,7 @@ Any LLM that can read and write files. No dependencies, no installation, no conf
 2. **Say "scan this directory"** — the LLM creates L1 `FILEAGENTS.md` files at boundary folders and generates the index
 3. **Pick a folder you work in regularly** — say "set up this folder" to turn its `FILEAGENTS.md` into a real governance layer
 4. **Work normally** — only as repetition emerges does the LLM suggest capturing procedures in `AGENTS.md`
+5. **Get oriented** — type `/contents [folder-tag]` anywhere to seamlessly open the folder's `humans.html` lens in your chat or browser
 
 For a practical walkthrough, see [`QUICKSTART.md`](QUICKSTART.md).
 

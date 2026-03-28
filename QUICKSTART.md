@@ -71,6 +71,10 @@ As you work in that folder over time, the LLM may notice patterns:
 Say yes, and the folder gets its AGENTS.md (now L3). The procedure is
 captured once and available in every future session, with any LLM.
 
+## 6. Request folder orientation
+
+At any time, type `/contents` (or `/contents [folder-tag]`) and the LLM will display the `humans.html` lens for that folder—either directly in your chat or by opening your system browser. This gives you an instant, high-fidelity summary without reading markdown.
+
 ## That's it
 
 No installation. No configuration. No database. No app.
