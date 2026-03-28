@@ -43,7 +43,9 @@ Folders progress through levels:
 6. fileagents.index.md is disposable — regenerate any time.
 7. FILEAGENTS.md inherits downward (parent → child). AGENTS.md does NOT.
 8. The system works with ANY LLM. No platform dependencies.
-9. **humans.html** is derived from `FILEAGENTS.md` (and `AGENTS.md` when present). It must not contradict `FILEAGENTS.md`. Regenerate when governance or material inventory changes — see `fileagents.humans.md`.
+9. **humans.html** is derived from `FILEAGENTS.md`. It must not contradict `FILEAGENTS.md`. It is ALWAYS generated for the root folder during scan, and is MANDATORY for all folders at L2+. Regenerate when governance or materials change.
+10. **Sequential Forcing**: When executing a multi-folder upgrade (like L2 Governing), you MUST execute in sequence: "Update the fileagents core first. Halt and verify. Then generate the humans.html nodes sequentially." This prevents the parallel tool parser from triggering an infinite rescue loop.
+11. **The Closure Protocol**: Every time you finish a complex task in an L2 or L3 folder, you MUST generate a `.fileagents.receipt.md` artifact detailing exactly what files were modified, confirming all constraints were respected, and logging any ambiguities.
 
 ## What to do now
 

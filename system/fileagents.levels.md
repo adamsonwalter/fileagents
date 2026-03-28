@@ -171,6 +171,10 @@ sourced from `AGENTS.md` headings (not a full copy of procedures).
 AI completeness gap analysis. Primary deliverables: diagnostic reports,
 implementation roadmaps, executive briefings.
 
+## Operational Triggers
+- `/govern` → Re-read FILEAGENTS.md, ask for missing context, and regenerate humans.html.
+- `/receipt` → Generate the .fileagents.receipt.md closure artifact detailing modified files, verified constraints, and technical debt.
+
 ## Procedures
 
 ### Gap diagnostic
@@ -228,9 +232,9 @@ Before presenting ANY deliverable:
 
 Start simple. Grow through use. Never front-load complexity.
 
-RUDIMENTARY → overview + 1-2 conventions
-INTERMEDIATE → procedures with steps + output conventions + domain knowledge
-OPERATIONAL → procedures + templates + verification + edge cases + domain data
+RUDIMENTARY → overview + operational triggers + 1-2 conventions
+INTERMEDIATE → triggers + procedures with steps + output conventions + domain knowledge
+OPERATIONAL → triggers + procedures + templates + verification + edge cases + domain data
 
 ### AGENTS.md rules
 

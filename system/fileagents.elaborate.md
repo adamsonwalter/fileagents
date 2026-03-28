@@ -26,6 +26,9 @@ The folder has frontmatter-only FILEAGENTS.md. User wants rules and structure.
 6. Create or refresh **humans.html** in this folder (see `fileagents.humans.md`) — derived from the new governance + shallow directory listing
 7. If tags or depends_on_tags changed → regenerate index (see fileagents.index.md)
 
+**Sequential Forcing Override (Multi-Folder Upgrades):**
+When executing a multi-folder upgrade (like L2 Governing across several folders), you MUST execute in this exact sequence: "Update the fileagents core first. Halt and verify. Then generate the humans.html nodes sequentially." This prevents the parallel tool parser from triggering an infinite rescue loop.
+
 Use only the body sections the folder actually needs. See LEVELS.md for
 the full list of available sections and a complete L2 example.
 
@@ -37,6 +40,7 @@ The folder has governed FILEAGENTS.md. User wants operational procedures.
 2. Ask the user: what do you repeatedly do in this folder?
 3. Create AGENTS.md starting RUDIMENTARY:
    - Overview (2-3 sentences)
+   - Operational Triggers (mandatory: `/govern`, `/receipt`)
    - 1-2 key conventions or procedures
 4. Refresh **humans.html** so the “Procedures at a glance” section reflects `AGENTS.md` headings (see `fileagents.humans.md`).
 5. As the user works over time, offer to add:
@@ -56,6 +60,13 @@ See LEVELS.md for complete L3 example.
 - Platform tools (Claude Skills, GPT Actions) are hints only:
   "If available, delegate to [tool]. Otherwise follow these steps..."
 - The folder must work with any LLM
+
+## The Closure Protocol
+
+When finishing any complex multi-file task in an L2 or L3 folder, you MUST instinctively execute the `/receipt` trigger logic. Generate a temporary `.fileagents.receipt.md` in the current folder detailing:
+1. Exact files modified/created.
+2. Confirmation that specific `FILEAGENTS.md` boundaries were checked and respected.
+3. Any data gaps, ambiguities, or technical friction encountered so they can be mined later.
 
 ## Permission rules
 
