@@ -284,6 +284,7 @@ For a practical walkthrough, see [`QUICKSTART.md`](QUICKSTART.md).
 | `fileagents.elaborate.md` | Elaboration procedures (L1→L2→L3) |
 | `fileagents.index.md` | Index generation, format, and tag resolution |
 | `fileagents.humans.md` | `humans.html` — human-readable folder lens (HTML profile and workflow) |
+| `fileagents.sop.md` | Architecture for Native SOP Pipelines and automated workflows |
 
 ### Spec Version
 

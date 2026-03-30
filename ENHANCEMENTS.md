@@ -6,7 +6,8 @@ The enhancements are ordered by the **80/20 Principle** (highest system integrit
 
 ---
 
-## 1. The Closure Protocol (The "Receipt" Artifact)
+## 1. The Closure Protocol (The "Receipt" Artifact) [COMPLETED]
+**Status:** Implemented actively in `fileagents.system.md` and `fileagents.sop.md`.
 **Priority:** Highest | **Effort:** Low | **Impact:** High (Immediate Verification)
 
 **Concept:** 
@@ -20,7 +21,8 @@ Update `fileagents.system.md` to mandate a standard **Closure Protocol**. At the
 
 ---
 
-## 2. Hard-Wired Operational Triggers (Slash Commands)
+## 2. Hard-Wired Operational Triggers (Slash Commands) [COMPLETED]
+**Status:** Implemented actively in `AGENTS.md` references and `fileagents.sop.md`.
 **Priority:** High | **Effort:** Low | **Impact:** High (Eliminates Prompt Engineering)
 
 **Concept:** 
@@ -63,7 +65,8 @@ Introduce an extraction pattern via `fileagents.index.md`. When the Forensic Min
 
 ---
 
-## 5. Native SOP Pipelines (Functional Folders)
+## 5. Native SOP Pipelines (Functional Folders) [COMPLETED]
+**Status:** Formalized as an architectural standard in `system/fileagents.sop.md`.
 **Priority:** High | **Effort:** Structural Standardisation | **Impact:** High (Eliminates OS Bloat)
 
 **Concept:** 

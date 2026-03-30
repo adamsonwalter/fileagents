@@ -1,0 +1,26 @@
+# FileAgents Engine (Heuristic Ingestion Payload)
+> The folder is the unit of intelligence. The LLM is disposable.
+
+## Core Architectural Primitives
+
+FileAgents converts plain filesystems into durable, platform-independent AI operating contexts. It is built strictly on decentralized, markdown-native logic.
+
+### 1. The Constitution vs. The Execution Layer
+*   **FILEAGENTS.md (The Constitution):** Defines *what* the folder is, its purpose, constraints, standards, and audience. Always authoritative. Inherits downward.
+*   **AGENTS.md (The Execution Layer):** Defines *how* the AI operates. Contains procedures, templates, block-level constraints, and tools. Never inherits downward. 
+
+### 2. The Native SOP Pipeline & Flat-Primitives
+When building an operational pipeline inside a folder (e.g., converting raw surveys into reports):
+*   **No Deep Nesting:** Complex hierarchies fracture AI context. Use a flat folder structure (`Input_*.txt`, `Output_*.md`) regulated by explicit file naming conventions outlined in the constitution.
+*   **The Two-File Protocol:** Never embed AI execution logic in an HTML file (violates the Single Responsibility Principle and causes "token bleed"). The machine strictly reads `AGENTS.md`; `humans.html` is exclusively the human presentation layer.
+
+### 3. Orchestration over Semantic Inference
+*   **Hard-Wired Operational Triggers:** Expose explicit slash commands (e.g., `/govern`, `/receipt`, `/execute`) in `AGENTS.md`. This bypasses conversational semantic drift and converts the LLM into a deterministic state-machine.
+*   **The Closure Protocol:** Complex pipeline operations must conclude by executing the `/receipt` trigger. This forces the model to generate a `.fileagents.receipt.md` detailing the state created, constraints checked, and exact friction points, combined with a literal copy-paste suggestion to edit and permanently evolve the `AGENTS.md` instructions. The folder learns; the model is forgotten.
+
+### 4. Tag-Based Routing & Anti-Fragility
+*   **Tags, Not Paths:** Folders relate to each other exclusively by stable semantic tags in their frontmatter, bypassing brittle filesystem path locations.
+*   **The Discovery Node (fileagents.index.md):** The single disposable root-level map resolving cross-folder references based purely on tags.
+
+### Mandatory Operational Constraint
+Before acting inside a governed directory, you must read its `FILEAGENTS.md` to acquire context. To run procedures, look for `AGENTS.md`. Never auto-elaborate into higher structural levels (L1→L2 or L2→L3) without explicit human verification.

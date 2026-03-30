@@ -16,6 +16,7 @@ You have been given these files. Read the one relevant to the task:
 | fileagents.elaborate.md | User asks you to deepen/improve a folder |
 | fileagents.index.md (spec) | You need to generate, read, or update the discovery index |
 | fileagents.humans.md | You need to create or refresh `humans.html` |
+| fileagents.sop.md | User asks to build an SOP, pipeline, or automated process |
 
 ## The system in 30 seconds
 
@@ -53,6 +54,7 @@ Ask the user what they want:
 - "/contents" or "What is this folder?" → Follow the **Humans.html Visualization Protocol** to present `humans.html` if present; if missing, suggest creating it (see `fileagents.humans.md`).
 - "Scan my disk/directory" → read `fileagents.scan.md`, execute
 - "Set up this folder" or "deepen this folder" → read `fileagents.elaborate.md`, execute
+- "Build an SOP" or "create a pipeline" → read `fileagents.sop.md`, execute
 - "Rebuild the index" → read `fileagents.index.md`, execute
 - General work in a governed folder → read its `FILEAGENTS.md`, comply with rules
 
