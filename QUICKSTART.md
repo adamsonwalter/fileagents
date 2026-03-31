@@ -28,26 +28,36 @@ system/
 
 **Any other LLM:** Paste or attach the files at the start of your session.
 
-## 3. Run your first scan
+## 3. The Gold Standard Prompt (Zero Ambiguity)
 
-Say to the LLM:
+The most effective way to start is to move from a conversational "request" to a **System Command**. This bypasses AI drift and ensures the model executes the FileAgents protocol with surgical precision.
 
-> Scan my ~/Documents directory
+**Copy and paste this as your first instruction:**
+> "Use the **@fileagents** skill to perform a **Scan Turn** on `@target-folder`. 
+> 1. Catalog all boundary folders with Level 1 `FILEAGENTS.md` files.
+> 2. Regenerate the root `fileagents.index.md` to map all tags.
+> 3. Identify the highest-activity folder and suggest it for an L2 Governance upgrade."
 
-or
+### Why this works:
+- **"Scan Turn"**: Signals the AI to act as an auditor (L0→L1), not a writer.
+- **"Boundary Folders"**: Prevents "Folder Explosion" by cataloging only where context changes.
+- **"Regenerate the Index"**: Establishes the discovery cache immediately.
+
+---
+
+## 4. Run your first scan
+
+If you didn't use the prompt above, you can simply say:
 
 > Scan the current working directory
 
 The LLM will:
-1. Read `fileagents.scan.md` for the algorithm
-2. Walk your directory tree
-3. Create L1 `FILEAGENTS.md` files (frontmatter only) at significant folders
-4. Generate `fileagents.index.md` at the root
-5. Report what it found
+1. Read `fileagents.scan.md` for the algorithm.
+2. Walk your directory tree.
+3. Create L1 `FILEAGENTS.md` files (frontmatter only).
+4. Generate `fileagents.index.md` at the root.
 
-This takes minutes. It creates no body content, no AGENTS.md, nothing heavy.
-
-## 4. Pick one folder to deepen
+## 5. Pick one folder to deepen
 
 Look at the scan results. Pick one folder you actually work in regularly.
 
@@ -61,7 +71,7 @@ The LLM will:
 3. Add body sections to that folder's FILEAGENTS.md (now L2)
 4. Update the index if tags changed
 
-## 5. Let execution emerge
+## 6. Let execution emerge
 
 As you work in that folder over time, the LLM may notice patterns:
 
@@ -71,7 +81,7 @@ As you work in that folder over time, the LLM may notice patterns:
 Say yes, and the folder gets its AGENTS.md (now L3). The procedure is
 captured once and available in every future session, with any LLM.
 
-## 6. Request folder orientation
+## 7. Request folder orientation
 
 At any time, type `/contents` (or `/contents [folder-tag]`) and the LLM will display the `humans.html` lens for that folder—either directly in your chat or by opening your system browser. This gives you an instant, high-fidelity summary without reading markdown.
 
