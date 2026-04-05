@@ -4,7 +4,7 @@ FileAgents turns folders into durable AI operating contexts that compound with u
 
 ## 1. Get the system files
 
-Download or clone this repo. The six files in `system/` are all you need:
+Download or clone this repo. The six files in `system/` are all you need (see also [`docs/OPERATIONS.md`](docs/OPERATIONS.md) for how to run FileAgents as a **batch** system in a real tree—vault root, moves, index staleness):
 
 ```
 system/
