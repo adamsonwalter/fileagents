@@ -94,4 +94,4 @@ If power users need it: a **watcher** on the vault root that **debounces** (“s
 
 ## 10. Relation to other “OS” or workflow layers
 
-FileAgents governs **the forest** (self-describing folders, discovery by tag). Separate workflow templates or task systems can govern **repeatable AI task patterns** inside whatever part of that forest you point them at. The two are **complementary**, not competing.
+FileAgents governs **the forest** (self-describing folders, discovery by tag). Separate **macro-scale** task templates—company context, workflow folders, job instances, validation packs—can live in another repo or layout. They answer **which capabilities exist and how practice-level work is structured**. FileAgents answers **how an individual folder stays legible to models and people** (tags, index, L3 execution). Same **philosophy** (presence over orchestration, truth vs disposable maps, closure, flat discipline); **different scale**. Clients need not adopt both; cognitive load matters—macro task systems are often enough until you deliberately add micro folder governance.
