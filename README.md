@@ -272,7 +272,7 @@ Any LLM that can read and write files. No dependencies, no installation, no conf
 4. **Work normally** — only as repetition emerges does the LLM suggest capturing procedures in `AGENTS.md`
 5. **Get oriented** — type `/contents [folder-tag]` anywhere to seamlessly open the folder's `humans.html` lens in your chat or browser
 
-For a practical walkthrough, see [`QUICKSTART.md`](QUICKSTART.md).
+For a practical walkthrough, see [`QUICKSTART.md`](QUICKSTART.md). For **vault roots, move discipline, staleness, and habits** in production, see [`docs/OPERATIONS.md`](docs/OPERATIONS.md).
 
 ### System Files
 
@@ -296,6 +296,7 @@ Current: **0.3.0**
 |------|---------|
 | `system/` | The actual FileAgents operating spec |
 | `examples/` | Concrete examples of L1, L2, L3, and index output |
+| `docs/OPERATIONS.md` | Operating habits: vault root, batch truth, moves, staleness, rituals |
 | `QUICKSTART.md` | Fast onboarding guide |
 | `CONTRIBUTING.md` | How to contribute examples, edge cases, and spec improvements |
 | `CHANGELOG.md` | Release history |
