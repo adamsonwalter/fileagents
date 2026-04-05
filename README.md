@@ -274,6 +274,8 @@ Any LLM that can read and write files. No dependencies, no installation, no conf
 
 For a practical walkthrough, see [`QUICKSTART.md`](QUICKSTART.md). For **vault roots, move discipline, staleness, and habits** in production, see [`docs/OPERATIONS.md`](docs/OPERATIONS.md).
 
+**Building a pipeline in one folder?** See **[`docs/MINI_SOP.md`](docs/MINI_SOP.md)** — inputs, templates, outputs, and steps in one place (L3), without assembling the spec from scratch.
+
 ### System Files
 
 | File | Purpose |
@@ -297,6 +299,7 @@ Current: **0.3.0**
 | `system/` | The actual FileAgents operating spec |
 | `examples/` | Concrete examples of L1, L2, L3, and index output |
 | `docs/OPERATIONS.md` | Operating habits: vault root, batch truth, moves, staleness, rituals |
+| `docs/MINI_SOP.md` | One-page recipe: mini-SOP in a single L3 folder (inputs, refs, outputs, steps) |
 | `QUICKSTART.md` | Fast onboarding guide |
 | `CONTRIBUTING.md` | How to contribute examples, edge cases, and spec improvements |
 | `CHANGELOG.md` | Release history |

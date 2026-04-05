@@ -3,6 +3,7 @@
 ## [Unreleased]
 
 ### Added
+- `docs/MINI_SOP.md` — at-a-glance L3 mini-SOP recipe (inputs, refs, outputs, steps in one folder); links to `fileagents.sop.md`; answers “is this how it works?” for IDE + GitHub readers
 - `docs/OPERATIONS.md` — operator guidance for deploying FileAgents in practice: batch truth vs moves, single vault root, truth hierarchy, move discipline, staleness, optional rituals and watchers; complements `system/` specs without duplicating them.
 - `system/fileagents.sop.md` — central architectural blueprint for building Native SOP Pipelines (Functional Folders). Incorporates the Two-File Protocol (no HTML for AI instructions), Flat-Primitives mapping, hard-wired slash commands (`/execute`, `/receipt`), and the System Evolution engine for self-healing workflows.
 - `llms.txt` — root-level heuristic payload and ingestion map detailing the core philosophical framework, constraint archetypes, and architectural logic for LLM reference.

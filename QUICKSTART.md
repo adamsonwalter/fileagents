@@ -28,6 +28,10 @@ system/
 
 **Any other LLM:** Paste or attach the files at the start of your session.
 
+## 2b. Mini-SOP in one folder (optional, L3)
+
+If you are **not** wandering the whole disk— you want **one pipeline** (inputs → templates/refs → outputs → ordered steps)—read **[`docs/MINI_SOP.md`](docs/MINI_SOP.md)** first. **WIIFM:** one checklist so you and the model agree on where files live and where procedures live (`FILEAGENTS.md` + `AGENTS.md`), without four mystery directories or re-explaining every chat.
+
 ## 3. The Gold Standard Prompt (Zero Ambiguity)
 
 The most effective way to start is to move from a conversational "request" to a **System Command**. This bypasses AI drift and ensures the model executes the FileAgents protocol with surgical precision.
