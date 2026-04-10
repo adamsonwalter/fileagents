@@ -61,13 +61,25 @@ Users tolerate batch systems when they see **when** truth was last aligned. They
 
 ---
 
-## 6. Optional future: “what changed since last scan?”
+## 6. Vault lint (consistency pass)
+
+Shared vocabulary with **LLM Wiki**-style setups: a periodic **lint** is not a full re-ingest; it sanity-checks structure and discovery.
+
+- **Index vs disk:** Regenerate `fileagents.index.md` after moves; spot-check that tagged folders still resolve.
+- **Orphan signals:** Tags in frontmatter with no matching index row (or index paths that no longer exist) until the next scan—**fix by scanning**, then reconcile edge cases manually.
+- **`humans.html` freshness:** For L2+, if governance changed materially, regenerate the human lens so it does not contradict `FILEAGENTS.md` (see `system/fileagents.humans.md`).
+
+Fold this into the periodic ritual in §8 when it helps; skip when the vault was untouched.
+
+---
+
+## 7. Optional future: “what changed since last scan?”
 
 A high-leverage enhancement (not required for v1): keep a **snapshot** of path ↔ tag id from the previous run; on the next scan, emit a short **“changes since last scan”** section: added paths, removed paths, moved paths (same tag id, different path). That turns “FileAgents didn’t know” into **“here’s exactly what drifted; accept or fix.”**
 
 ---
 
-## 7. Periodic ritual
+## 8. Periodic ritual
 
 A **weekly** or **monthly** ritual fits batch reality better than pretending background daemons everywhere:
 
@@ -80,18 +92,18 @@ A **weekly** or **monthly** ritual fits batch reality better than pretending bac
 
 ---
 
-## 8. Optional: filesystem watch (later)
+## 9. Optional: filesystem watch (later)
 
 If power users need it: a **watcher** on the vault root that **debounces** (“schedule rescan in 5 minutes”) can reduce manual runs. Keep the **core** product story as **on-demand + periodic scan**; watches are an accelerator, not the contract.
 
 ---
 
-## 9. One-line doctrine
+## 10. One-line doctrine
 
 > Paths change; tags and `FILEAGENTS.md` travel with the folder; the index is rebuilt on scan—**run a scan after moves.**
 
 ---
 
-## 10. Relation to other “OS” or workflow layers
+## 11. Relation to other “OS” or workflow layers
 
 FileAgents governs **the forest** (self-describing folders, discovery by tag). Separate **macro-scale** task templates—company context, workflow folders, job instances, validation packs—can live in another repo or layout. They answer **which capabilities exist and how practice-level work is structured**. FileAgents answers **how an individual folder stays legible to models and people** (tags, index, L3 execution). Same **philosophy** (presence over orchestration, truth vs disposable maps, closure, flat discipline); **different scale**. Clients need not adopt both; cognitive load matters—macro task systems are often enough until you deliberately add micro folder governance.

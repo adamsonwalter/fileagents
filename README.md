@@ -8,6 +8,8 @@ FileAgents is a lightweight open standard built around `FILEAGENTS.md`: a single
 
 **Not just markdown conventions:** FileAgents creates a reinforcing loop where each governed folder improves future sessions, each cross-reference increases network value, and each repeated workflow can be captured once and reused indefinitely.
 
+**If you’ve seen “LLM Wiki” / stateful markdown knowledge bases:** FileAgents uses the same **file-over-app, compounding** move, but centers the **`FILEAGENTS.md` constitution per folder** instead of a single global wiki tree. [Mapping table and shared vocabulary →](docs/KARPATHY_LLM_WIKI_BRIDGE.md)
+
 ## Why `FILEAGENTS.md` Matters
 
 - One file can permanently explain a folder to any LLM
@@ -299,6 +301,7 @@ Current: **0.3.0**
 | `system/` | The actual FileAgents operating spec |
 | `examples/` | Concrete examples of L1, L2, L3, and index output |
 | `docs/OPERATIONS.md` | Operating habits: vault root, batch truth, moves, staleness, rituals |
+| `docs/KARPATHY_LLM_WIKI_BRIDGE.md` | Mapping / vocabulary bridge for “LLM Wiki” readers |
 | `docs/MINI_SOP.md` | One-page recipe: mini-SOP in a single L3 folder (inputs, refs, outputs, steps) |
 | `QUICKSTART.md` | Fast onboarding guide |
 | `CONTRIBUTING.md` | How to contribute examples, edge cases, and spec improvements |

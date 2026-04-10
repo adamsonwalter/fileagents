@@ -5,6 +5,8 @@
 
 FileAgents converts plain filesystems into durable, platform-independent AI operating contexts. It is built strictly on decentralized, markdown-native logic.
 
+**Karpathy “LLM Wiki” adjacent:** Same big idea—**stateful** markdown the agent maintains so sessions compound—but FileAgents allocates that state **per folder** (`FILEAGENTS.md` + optional `AGENTS.md`) with **tag-based** discovery (`fileagents.index.md`), not a single wiki root. See `docs/KARPATHY_LLM_WIKI_BRIDGE.md`.
+
 ### 1. The Constitution vs. The Execution Layer
 *   **FILEAGENTS.md (The Constitution):** Defines *what* the folder is, its purpose, constraints, standards, and audience. Always authoritative. Inherits downward.
 *   **AGENTS.md (The Execution Layer):** Defines *how* the AI operates. Contains procedures, templates, block-level constraints, and tools. Never inherits downward. 

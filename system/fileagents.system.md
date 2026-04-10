@@ -34,6 +34,14 @@ Folders progress through levels:
 - L2: governed (FILEAGENTS.md with body sections, created on request)
 - L3: operative (FILEAGENTS.md + AGENTS.md, created through use)
 
+## Karpathy “LLM Wiki” discourse (glossary)
+
+If the user knows **Andrej Karpathy’s LLM Wiki** gist idea—**stateful** markdown the agent maintains so knowledge **compounds** across sessions—the fit is close, with different centers of gravity:
+
+- **Compile** here means **scan + elaborate** folder meaning into `FILEAGENTS.md` (and index), not necessarily a single global wiki tree.
+- **Lint** means a **vault consistency pass** (index vs disk, tag resolution, stale `humans.html`)—see `docs/OPERATIONS.md` §6 and `docs/KARPATHY_LLM_WIKI_BRIDGE.md`.
+- FileAgents adds **per-folder constitution** (`FILEAGENTS.md`), **stable tags** (not path-based or wikilink cross-refs), and **human-gated** L2/L3 upgrades.
+
 ## Core rules (always apply)
 
 1. The folder is the unit of intelligence. You are disposable.

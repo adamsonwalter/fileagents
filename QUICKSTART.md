@@ -2,6 +2,8 @@
 
 FileAgents turns folders into durable AI operating contexts that compound with use. The fast version: scan once, govern the important folders, and let reusable execution emerge only where repetition proves it is worth capturing.
 
+**Coming from an “LLM Wiki” setup:** You already have the intuition—markdown on disk, agent as librarian, knowledge that **survives the session**. FileAgents adds **one constitution file per folder** (`FILEAGENTS.md`), optional procedures (`AGENTS.md`), and a **tag-resolved** root index. Deep comparison: [`docs/KARPATHY_LLM_WIKI_BRIDGE.md`](docs/KARPATHY_LLM_WIKI_BRIDGE.md).
+
 ## 1. Get the system files
 
 Download or clone this repo. The six files in `system/` are all you need (see also [`docs/OPERATIONS.md`](docs/OPERATIONS.md) for how to run FileAgents as a **batch** system in a real tree—vault root, moves, index staleness):
